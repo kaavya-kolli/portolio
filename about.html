@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Kaavya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fdf6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    .wiggle:hover {
+      animation: wiggle 0.3s ease-in-out;
+    }
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+    }
+  </style>
+</head>
+<body class="p-6 space-y-20">
+  <!-- About Intro -->
+  <section class="text-center" data-aos="fade-down">
+    <h1 class="text-5xl font-bold text-pink-600">Meet Kaavya</h1>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto mt-4">Kaavya is a passionate visual storyteller who blends branding, UI/UX design, and illustration to create immersive, heartfelt digital experiences.</p>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="max-w-4xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-8 text-center">🧵 My Creative Journey</h2>
+    <div class="space-y-6">
+      <div class="bg-yellow-100 p-4 rounded-md shadow-md rotate-[-2deg] wiggle">
+        🎨 Discovered a love for doodling and storytelling as a kid.
+      </div>
+      <div class="bg-pink-100 p-4 rounded-md shadow-md rotate-[2deg] wiggle">
+        💻 Studied design and learned to bring ideas to life digitally.
+      </div>
+      <div class="bg-green-100 p-4 rounded-md shadow-md rotate-[-1deg] wiggle">
+        🚀 Freelanced for brands, built websites, and created illustrations.
+      </div>
+    </div>
+  </section>
+
+  <!-- Favorite Tools Section -->
+  <section class="text-center" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold mb-6">🛠️ Favorite Tools</h2>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <span class="bg-blue-200 px-4 py-2 rounded-full shadow-md hover:scale-110 transition wiggle">Figma</span>
+      <span class="bg-yellow-300 px-4 py-2 rounded-full shadow-md hover:scale-110 transition wiggle">Procreate</span>
+      <span class="bg-pink-300 px-4 py-2 rounded-full shadow-md hover:scale-110 transition wiggle">Notion</span>
+      <span class="bg-green-200 px-4 py-2 rounded-full shadow-md hover:scale-110 transition wiggle">Tailwind CSS</span>
+    </div>
+  </section>
+
+  <!-- Fun Facts -->
+  <section class="text-center" data-aos="flip-left">
+    <h2 class="text-3xl font-bold mb-6">🌟 Fun Facts</h2>
+    <ul class="list-none space-y-3 text-lg">
+      <li>📸 I document my travels in hand-drawn travel journals</li>
+      <li>🐾 I have a cat named Pixel who loves sitting on my keyboard</li>
+      <li>🕯️ I collect quirky candles and mugs from everywhere I go</li>
+    </ul>
+  </section>
+
+  <!-- Back Button -->
+  <section class="text-center mt-10">
+    <a href="index.html" class="bg-yellow-200 px-6 py-2 rounded-full font-bold shadow-md hover:scale-105 hover:rotate-1 transition inline-block">← Back to Home</a>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
