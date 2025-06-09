@@ -1,75 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaavya's Photography</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #fdf6f0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-    }
-    .wiggle:hover {
-      animation: wiggle 0.3s ease-in-out;
-    }
-    @keyframes wiggle {
-      0%, 100% { transform: rotate(-2deg); }
-      50% { transform: rotate(2deg); }
-    }
-    @keyframes sdInsert {
-      0% { transform: translateY(-150px) scale(1.2); opacity: 0; }
-      60% { transform: translateY(0) scale(1); opacity: 1; }
-      100% { transform: scale(0); opacity: 0; }
-    }
-    @keyframes cameraFlash {
-      0% { background: #000; opacity: 0; }
-      50% { background: #fff; opacity: 1; }
-      100% { background: #000; opacity: 0; }
-    }
-    .flash {
-      animation: cameraFlash 0.8s ease-in-out forwards;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaavya's Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fdf6f0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .wiggle:hover {
+            animation: wiggle 0.3s ease-in-out;
+        }
+
+        @keyframes wiggle {
+
+            0%,
+            100% {
+                transform: rotate(-2deg);
+            }
+
+            50% {
+                transform: rotate(2deg);
+            }
+        }
+
+        @keyframes sdInsert {
+            0% {
+                transform: translateY(-150px) scale(1.2);
+                opacity: 0;
+            }
+
+            60% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes cameraFlash {
+            0% {
+                background: #000;
+                opacity: 0;
+            }
+
+            50% {
+                background: #fff;
+                opacity: 1;
+            }
+
+            100% {
+                background: #000;
+                opacity: 0;
+            }
+        }
+
+        .flash {
+            animation: cameraFlash 0.8s ease-in-out forwards;
+        }
+
+        /* Add scrapbook themed styles */
+        .scrapbook-btn {
+            font-family: 'Permanent Marker', 'Comic Sans MS', cursive, sans-serif;
+            border: 2px dashed #eab308;
+            box-shadow: 2px 4px 0 #fbbf24, 4px 8px 0 #fcd34d;
+        }
+
+        .scrapbook-card {
+            font-family: 'Permanent Marker', 'Comic Sans MS', cursive, sans-serif;
+            border-style: dashed;
+            box-shadow: 2px 4px 0 #fbbf24, 4px 8px 0 #fcd34d;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
+
 <body class="p-6 space-y-20">
-  <!-- SD Card Animation Section -->
-  <section class="relative h-[300px] flex items-center justify-center bg-gray-900">
-    <div class="absolute inset-0 z-10 flex items-center justify-center">
-      <img src="https://cdn-icons-png.flaticon.com/512/3022/3022258.png" alt="SD Card" class="w-24 animate-[sdInsert_1.5s_ease-in-out_forwards]">
-    </div>
-    <div id="flash" class="absolute inset-0 z-20"></div>
-    <div class="text-white text-3xl font-bold z-30">Loading Photos...</div>
-  </section>
+    <!-- Navigation Bar -->
+    <nav
+        class="flex justify-center gap-6 mb-10 sticky top-0 z-50 bg-[#fdf6f0]/80 backdrop-blur border-b border-yellow-200 shadow handdrawn">
+        <a href="index.html"
+            class="bg-yellow-300 px-5 py-2 rounded-full shadow-md font-bold text-gray-800 scrapbook-btn transition-all duration-300 hover:scale-110 hover:bg-yellow-400 hover:shadow-xl">Home</a>
+        <a href="about.html"
+            class="bg-pink-200 px-5 py-2 rounded-full shadow-md font-bold text-gray-800 scrapbook-btn transition-all duration-300 hover:scale-110 hover:bg-pink-300 hover:shadow-xl">About</a>
+        <a href="photography.html"
+            class="bg-green-200 px-5 py-2 rounded-full shadow-md font-bold text-gray-800 scrapbook-btn transition-all duration-300 hover:scale-110 hover:bg-green-300 hover:shadow-xl">Photography</a>
+    </nav>
 
-  <!-- Photography Gallery Section -->
-  <section class="max-w-5xl mx-auto" data-aos="fade-up">
-    <h1 class="text-4xl font-bold text-center mb-10">📷 Kaavya's Captures</h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <img src="https://via.placeholder.com/300x200" alt="Photo 1" class="rounded-lg shadow-lg hover:scale-105 transition handdrawn">
-      <img src="https://via.placeholder.com/300x200" alt="Photo 2" class="rounded-lg shadow-lg hover:scale-105 transition handdrawn">
-      <img src="https://via.placeholder.com/300x200" alt="Photo 3" class="rounded-lg shadow-lg hover:scale-105 transition handdrawn">
-      <img src="https://via.placeholder.com/300x200" alt="Photo 4" class="rounded-lg shadow-lg hover:scale-105 transition handdrawn">
-      <img src="https://via.placeholder.com/300x200" alt="Photo 5" class="rounded-lg shadow-lg hover:scale-105 transition handdrawn">
-      <img src="https://via.placeholder.com/300x200" alt="Photo 6" class="rounded-lg shadow-lg hover:scale-105 transition handdrawn">
-    </div>
-  </section>
+    <!-- SD Card Animation Section -->
+    <section class="relative h-[300px] flex items-center justify-center bg-gray-900">
+        <div class="absolute inset-0 z-10 flex items-center justify-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3022/3022258.png" alt="SD Card"
+                class="w-24 animate-[sdInsert_1.5s_ease-in-out_forwards]">
+        </div>
+        <div id="flash" class="absolute inset-0 z-20"></div>
+        <div class="text-white text-3xl font-bold z-30">Loading Photos...</div>
+    </section>
 
-  <!-- Back Button -->
-  <section class="text-center mt-10">
-    <a href="index.html" class="bg-yellow-200 px-6 py-2 rounded-full font-bold shadow-md hover:scale-105 hover:rotate-1 transition inline-block">← Back to Home</a>
-  </section>
+    <!-- Photography Gallery Section -->
+    <section class="max-w-5xl mx-auto" data-aos="fade-up">
+        <h1 class="text-4xl font-bold text-center mb-10">📷 Kaavya's Captures</h1>
+        <!-- Use real images from the photos folder -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <img src="photos/634BE62F-2055-44E1-BB7C-D8A3DEA83225.JPG" alt="Sunset Beach"
+                class="rounded-lg shadow-lg hover:scale-105 transition handdrawn scrapbook-card">
+            <img src="photos/DSC_0259.JPG" alt="Mountain Lake"
+                class="rounded-lg shadow-lg hover:scale-105 transition handdrawn scrapbook-card">
+            <img src="photos/IMG_0211.JPG" alt="City Lights"
+                class="rounded-lg shadow-lg hover:scale-105 transition handdrawn scrapbook-card">
+            <img src="photos/IMG_2412.JPG" alt="Forest Trail"
+                class="rounded-lg shadow-lg hover:scale-105 transition handdrawn scrapbook-card">
+            <img src="photos/IMG_4479.JPG" alt="Vintage Car"
+                class="rounded-lg shadow-lg hover:scale-105 transition handdrawn scrapbook-card">
+            <img src="photos/IMG_4631.JPG" alt="Portrait Smile"
+                class="rounded-lg shadow-lg hover:scale-105 transition handdrawn scrapbook-card">
+        </div>
+    </section>
 
-  <script>
-    window.onload = () => {
-      const flash = document.getElementById('flash');
-      flash.classList.add('flash');
-    };
-  </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- Experience Wallet Animation -->
+    <section class="flex flex-col items-center my-16" data-aos="fade-up">
+        <div class="relative w-64 h-40 mb-8">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Wallet"
+                class="absolute w-64 h-40 z-10 handdrawn" style="top:0;left:0;">
+            <div class="absolute left-8 top-8 z-20 transition-transform duration-700 hover:-translate-x-24 hover:-rotate-6"
+                style="width:180px;">
+                <div
+                    class="bg-yellow-100 rounded-lg shadow-lg p-4 font-bold text-gray-800 scrapbook-card border-2 border-yellow-300">
+                    📸 Photo Contest Winner<br><span class="text-sm font-normal">2021</span></div>
+            </div>
+            <div class="absolute left-12 top-20 z-20 transition-transform duration-700 hover:-translate-x-32 hover:-rotate-12"
+                style="width:180px;">
+                <div
+                    class="bg-pink-100 rounded-lg shadow-lg p-4 font-bold text-gray-800 scrapbook-card border-2 border-pink-300">
+                    🌄 Travel Blogger<br><span class="text-sm font-normal">2022</span></div>
+            </div>
+            <div class="absolute left-16 top-32 z-20 transition-transform duration-700 hover:-translate-x-40 hover:-rotate-12"
+                style="width:180px;">
+                <div
+                    class="bg-green-100 rounded-lg shadow-lg p-4 font-bold text-gray-800 scrapbook-card border-2 border-green-300">
+                    🎞️ Street Photographer<br><span class="text-sm font-normal">2023</span></div>
+            </div>
+        </div>
+        <p class="text-gray-600">Hover over the cards to see them slide out!</p>
+    </section>
+
+    <!-- Back Button -->
+    <section class="text-center mt-10">
+        <a href="index.html"
+            class="bg-yellow-200 px-6 py-2 rounded-full font-bold shadow-md hover:scale-105 hover:rotate-1 transition inline-block">←
+            Back to Home</a>
+    </section>
+
+    <script>
+        window.onload = () => {
+            const flash = document.getElementById('flash');
+            flash.classList.add('flash');
+        };
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>

@@ -1,102 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaavya's Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #fdf6f0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-    }
-    .handdrawn {
-      filter: drop-shadow(0 1px 0.5px rgba(0,0,0,0.2));
-    }
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-    @keyframes wiggle {
-      0%, 100% { transform: rotate(-2deg); }
-      50% { transform: rotate(2deg); }
-    }
-    .wiggle:hover {
-      animation: wiggle 0.3s ease-in-out;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaavya's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fdf6f0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .handdrawn {
+            filter: drop-shadow(0 1px 0.5px rgba(0, 0, 0, 0.2));
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes wiggle {
+
+            0%,
+            100% {
+                transform: rotate(-2deg);
+            }
+
+            50% {
+                transform: rotate(2deg);
+            }
+        }
+
+        .wiggle:hover {
+            animation: wiggle 0.3s ease-in-out;
+        }
+
+        /* Add scrapbook themed styles */
+        .scrapbook-btn {
+            font-family: 'Permanent Marker', 'Comic Sans MS', cursive, sans-serif;
+            border: 2px dashed #eab308;
+            box-shadow: 2px 4px 0 #fbbf24, 4px 8px 0 #fcd34d;
+        }
+
+        .scrapbook-card {
+            font-family: 'Permanent Marker', 'Comic Sans MS', cursive, sans-serif;
+            border-style: dashed;
+            box-shadow: 2px 4px 0 #fbbf24, 4px 8px 0 #fcd34d;
+        }
+    </style>
+    <!-- Google Fonts for scrapbook -->
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
+
 <body class="p-6 space-y-20">
-  <!-- Header Section -->
-  <section class="flex flex-col items-center text-center fade-in">
-    <img src="/mnt/data/ed3d33da-2eb4-4851-be4d-feccd1c4bf77.png" alt="Desk Illustration" class="w-full max-w-5xl handdrawn">
-    <h1 class="text-5xl font-bold mt-4 text-pink-600">Kaavya's Portfolio</h1>
-  </section>
+    <!-- Navigation Bar -->
+    <nav
+        class="flex justify-center gap-6 mb-10 sticky top-0 z-50 bg-[#fdf6f0]/80 backdrop-blur border-b border-yellow-200 shadow handdrawn">
+        <a href="index.html"
+            class="bg-yellow-300 px-5 py-2 rounded-full shadow-md font-bold text-gray-800 scrapbook-btn transition-all duration-300 hover:scale-110 hover:bg-yellow-400 hover:shadow-xl">Home</a>
+        <a href="about.html"
+            class="bg-pink-200 px-5 py-2 rounded-full shadow-md font-bold text-gray-800 scrapbook-btn transition-all duration-300 hover:scale-110 hover:bg-pink-300 hover:shadow-xl">About</a>
+        <a href="photography.html"
+            class="bg-green-200 px-5 py-2 rounded-full shadow-md font-bold text-gray-800 scrapbook-btn transition-all duration-300 hover:scale-110 hover:bg-green-300 hover:shadow-xl">Photography</a>
+    </nav>
 
-  <!-- About Section -->
-  <section class="flex flex-col lg:flex-row justify-center items-center gap-12" data-aos="fade-up">
-    <img src="/mnt/data/0f5cf787-cc4e-4283-be8f-4ecaf8b14366.png" alt="Kaavya Polaroid" class="w-64 border-4 border-yellow-200 shadow-md rotate-[-2deg] handdrawn">
-    <div class="max-w-lg text-center lg:text-left">
-      <h2 class="text-4xl font-bold mb-4 text-gray-700">Who's Kaavya?</h2>
-      <p class="text-lg leading-relaxed text-gray-800">
-        I'm a branding, UI/UX, and graphic designer with a love for making meaningful and personal digital experiences. I love blending strategy with creativity — whether it’s building a brand identity, designing intuitive interfaces, or crafting visuals that tell a story.<br><br>
-        <span class="italic">— Kaavya :)</span>
-      </p>
-    </div>
-  </section>
+    <!-- Header Section -->
+    <section class="flex flex-col items-center text-center fade-in">
+        <img src="/mnt/data/ed3d33da-2eb4-4851-be4d-feccd1c4bf77.png" alt="Desk Illustration"
+            class="w-full max-w-5xl handdrawn">
+        <h1 class="text-5xl font-bold mt-4 text-pink-600">Kaavya's Portfolio</h1>
+    </section>
 
-  <!-- Photo Strip / Collage Section -->
-  <section class="flex flex-wrap justify-center gap-6" data-aos="zoom-in-up">
-    <img src="https://via.placeholder.com/150" class="w-40 shadow-lg rotate-[-3deg] hover:scale-105 hover:rotate-1 transition handdrawn" />
-    <img src="https://via.placeholder.com/150" class="w-40 shadow-lg rotate-[2deg] hover:scale-105 hover:rotate-1 transition handdrawn" />
-    <img src="https://via.placeholder.com/150" class="w-40 shadow-lg rotate-[-2deg] hover:scale-105 hover:rotate-1 transition handdrawn" />
-  </section>
+    <!-- Short About Me -->
+    <section class="max-w-2xl mx-auto text-center mb-10 handdrawn" data-aos="fade-down">
+        <h2 class="text-3xl font-bold text-pink-600 mb-2">Hi, I'm Kaavya!</h2>
+        <p class="text-lg text-gray-700">
+            I'm a designer and visual storyteller passionate about branding, UI/UX, and illustration. I love crafting
+            digital experiences that feel personal and heartfelt.
+        </p>
+    </section>
 
-  <!-- Sticky Notes Section -->
-  <section class="flex flex-wrap justify-center gap-6" data-aos="fade-right">
-    <div class="bg-yellow-200 p-4 w-48 rounded-md shadow-lg rotate-[-2deg] transition transform hover:scale-110 wiggle">💡 Fun Fact!</div>
-    <div class="bg-pink-200 p-4 w-48 rounded-md shadow-lg rotate-[2deg] transition transform hover:scale-110 wiggle">🌈 Design Tip</div>
-    <div class="bg-green-200 p-4 w-48 rounded-md shadow-lg rotate-[-1deg] transition transform hover:scale-110 wiggle">✍️ Note to self</div>
-  </section>
+    <!-- About Section -->
+    <section class="flex flex-col lg:flex-row justify-center items-center gap-12" data-aos="fade-up">
+        <img src="/mnt/data/0f5cf787-cc4e-4283-be8f-4ecaf8b14366.png" alt="Kaavya Polaroid"
+            class="w-64 border-4 border-yellow-200 shadow-md rotate-[-2deg] handdrawn">
+        <div class="max-w-lg text-center lg:text-left">
+            <h2 class="text-4xl font-bold mb-4 text-gray-700">Who's Kaavya?</h2>
+            <p class="text-lg leading-relaxed text-gray-800">
+                I'm a branding, UI/UX, and graphic designer with a love for making meaningful and personal digital
+                experiences. I love blending strategy with creativity — whether it’s building a brand identity,
+                designing intuitive interfaces, or crafting visuals that tell a story.<br><br>
+                <span class="italic">— Kaavya :)</span>
+            </p>
+        </div>
+    </section>
 
-  <!-- Message Section -->
-  <section class="text-center" data-aos="flip-up">
-    <h2 class="text-3xl font-bold mb-4">💌 Message Me</h2>
-    <p class="text-gray-700 mb-6">I'd love to hear from you! Leave a note below:</p>
-    <textarea class="w-full max-w-xl mx-auto p-4 rounded-lg border-2 border-dashed border-pink-300 bg-pink-50" rows="4" placeholder="Write something nice..."></textarea>
-    <button class="mt-4 bg-yellow-300 px-6 py-2 rounded-full shadow-md text-black font-bold transition-all duration-300 hover:scale-105 hover:rotate-1 hover:shadow-xl">✿ Send</button>
-  </section>
+    <!-- Photo Strip / Collage Section -->
+    <section class="flex flex-wrap justify-center gap-6" data-aos="zoom-in-up">
+        <img src="https://via.placeholder.com/150" alt="Collage 1"
+            class="w-40 shadow-lg rotate-[-3deg] hover:scale-105 hover:rotate-1 transition handdrawn" />
+        <img src="https://via.placeholder.com/150" alt="Collage 2"
+            class="w-40 shadow-lg rotate-[2deg] hover:scale-105 hover:rotate-1 transition handdrawn" />
+        <img src="https://via.placeholder.com/150" alt="Collage 3"
+            class="w-40 shadow-lg rotate-[-2deg] hover:scale-105 hover:rotate-1 transition handdrawn" />
+    </section>
 
-  <!-- Button Variants -->
-  <section class="text-center space-y-4" data-aos="fade-up">
-    <button class="bg-yellow-300 px-4 py-2 rounded-full shadow-md text-black font-bold transition-all duration-300 hover:scale-105 hover:rotate-1 hover:shadow-xl">✿ Let's Go!</button><br>
-    <button class="bg-pink-200 px-5 py-2 border-[3px] border-dashed border-pink-400 rotate-[-2deg] shadow-lg transition hover:rotate-0 hover:scale-110">📌 See Projects</button><br>
-    <a href="about.html" class="text-gray-800"><button class="relative group font-bold text-lg">
+    <!-- Sticky Notes Section -->
+    <section class="flex flex-wrap justify-center gap-6" data-aos="fade-right">
+        <div
+            class="bg-yellow-200 p-4 w-48 rounded-md shadow-lg rotate-[-2deg] transition transform hover:scale-110 wiggle">
+            💡 Fun Fact!</div>
+        <div
+            class="bg-pink-200 p-4 w-48 rounded-md shadow-lg rotate-[2deg] transition transform hover:scale-110 wiggle">
+            🌈 Design Tip</div>
+        <div
+            class="bg-green-200 p-4 w-48 rounded-md shadow-lg rotate-[-1deg] transition transform hover:scale-110 wiggle">
+            ✍️ Note to self</div>
+    </section>
 
-      About Me
-      <span class="absolute left-0 bottom-0 w-full h-1 bg-pink-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
-    </button></a>
-  </section>
+    <!-- Experience Wallet Animation -->
+    <section class="flex flex-col items-center my-16" data-aos="fade-up">
+        <div class="relative w-64 h-40 mb-8">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Wallet"
+                class="absolute w-64 h-40 z-10 handdrawn" style="top:0;left:0;">
+            <div class="absolute left-8 top-8 z-20 transition-transform duration-700 hover:-translate-x-24 hover:-rotate-6"
+                style="width:180px;">
+                <div
+                    class="bg-yellow-100 rounded-lg shadow-lg p-4 font-bold text-gray-800 scrapbook-card border-2 border-yellow-300">
+                    🎓 Design Intern<br><span class="text-sm font-normal">2022</span></div>
+            </div>
+            <div class="absolute left-12 top-20 z-20 transition-transform duration-700 hover:-translate-x-32 hover:-rotate-12"
+                style="width:180px;">
+                <div
+                    class="bg-pink-100 rounded-lg shadow-lg p-4 font-bold text-gray-800 scrapbook-card border-2 border-pink-300">
+                    🖌️ Freelance Illustrator<br><span class="text-sm font-normal">2023</span></div>
+            </div>
+            <div class="absolute left-16 top-32 z-20 transition-transform duration-700 hover:-translate-x-40 hover:-rotate-12"
+                style="width:180px;">
+                <div
+                    class="bg-green-100 rounded-lg shadow-lg p-4 font-bold text-gray-800 scrapbook-card border-2 border-green-300">
+                    💻 UI/UX Designer<br><span class="text-sm font-normal">2024</span></div>
+            </div>
+        </div>
+        <p class="text-gray-600">Hover over the cards to see them slide out!</p>
+    </section>
 
-  <!-- Floating stars -->
-  <script>
-    const stars = document.createElement('div');
-    stars.innerHTML = `
+    <!-- Message Section -->
+    <section class="text-center" data-aos="flip-up">
+        <h2 class="text-3xl font-bold mb-4">💌 Message Me</h2>
+        <p class="text-gray-700 mb-6">I'd love to hear from you! Leave a note below:</p>
+        <textarea class="w-full max-w-xl mx-auto p-4 rounded-lg border-2 border-dashed border-pink-300 bg-pink-50"
+            rows="4" placeholder="Write something nice..."></textarea>
+        <button
+            class="mt-4 bg-yellow-300 px-6 py-2 rounded-full shadow-md text-black font-bold transition-all duration-300 hover:scale-105 hover:rotate-1 hover:shadow-xl">✿
+            Send</button>
+    </section>
+
+    <!-- Button Variants (Navigation) -->
+    <section class="text-center space-y-4" data-aos="fade-up">
+        <a href="about.html"><button
+                class="bg-pink-200 px-5 py-2 border-[3px] border-dashed border-pink-400 rotate-[-2deg] shadow-lg scrapbook-btn transition hover:rotate-0 hover:scale-110">About
+                Me</button></a>
+        <a href="photography.html"><button
+                class="bg-green-200 px-5 py-2 border-[3px] border-dashed border-green-400 rotate-[2deg] shadow-lg scrapbook-btn transition hover:rotate-0 hover:scale-110">Photography</button></a>
+    </section>
+
+    <!-- Floating stars -->
+    <script>
+        const stars = document.createElement('div');
+        stars.innerHTML = `
       <div class="fixed top-10 left-10 text-yellow-400 text-3xl animate-bounce">★</div>
       <div class="fixed top-20 right-10 text-yellow-400 text-2xl animate-pulse">★</div>
     `;
-    document.body.appendChild(stars);
-  </script>
+        document.body.appendChild(stars);
+    </script>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
